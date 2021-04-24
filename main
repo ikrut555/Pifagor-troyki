@@ -1,0 +1,18 @@
+def pel(n):
+    if n==0:
+        return 0
+    if n==1:
+        return 1
+    return 2*pel(n-1)+pel(n-2)
+def odin(n):
+    return 2*pel(n)*pel(n+1)
+def dva(n):
+    return pel(n+1)*pel(n+1)-pel(n)*pel(n)
+def tri(n):
+    return pel(n+1)*pel(n+1)+pel(n)*pel(n)
+n=int(input("Введите номер Пифагоровой тройки: "))
+print(odin(n),end=" ")
+print(dva(n),end=" ")
+print(tri(n))
+print(odin(n)*odin(n),"+",dva(n)*dva(n),"=",tri(n)*tri(n))
+
